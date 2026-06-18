@@ -97,7 +97,7 @@ export default function Channel() {
                 current.created_at < earliest.created_at ? current : earliest
             );
             
-            fetch(`https://group-chat.brayden-b8b.workers.dev/channel/messages?before=${earliestMessage.id}`, {
+            fetch(`https://backend.soeparnocorp.workers.dev/channel/messages?before=${earliestMessage.id}`, {
                 headers: {
                     'X-Session-Id': localStorage.getItem('session') || '',
                     'X-Channel-Id': currentChannel.id
@@ -152,7 +152,7 @@ export default function Channel() {
             
             setIsLoadingMessages(true);
             try {
-                const response = await fetch('https://group-chat.brayden-b8b.workers.dev/channel/messages', {
+                const response = await fetch('https://backend.soeparnocorp.workers.dev/channel/messages', {
                     headers: {
                         'X-Session-Id': localStorage.getItem('session') || '',
                         'X-Channel-Id': currentChannel.id
@@ -195,7 +195,7 @@ export default function Channel() {
                 //     if (id) {
                 //         try {
                 //             // const response = await fetch(`/channels/messages`);
-                //             const response = await fetch('https://group-chat.brayden-b8b.workers.dev/channel/messages', {
+                //             const response = await fetch('https://backend.soeparnocorp.workers.dev/channel/messages', {
                 //                 method: 'POST',
                 //                 headers: {
                 //                     'Content-Type': 'application/json',
@@ -242,7 +242,7 @@ export default function Channel() {
 
     const handleLeaveChannel = async () => {
         try {
-            const response = await fetch(`https://group-chat.brayden-b8b.workers.dev/channels/${currentChannel?.id}/leave`, {
+            const response = await fetch(`https://backend.soeparnocorp.workers.dev/channels/${currentChannel?.id}/leave`, {
                 method: 'POST',
                 headers: {
                     'X-Session-Id': localStorage.getItem('session') || '',
@@ -271,7 +271,7 @@ export default function Channel() {
 
         setIsSending(true);
         try {
-            const response = await fetch('https://group-chat.brayden-b8b.workers.dev/channel/messages', {
+            const response = await fetch('https://backend.soeparnocorp.workers.dev/channel/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
