@@ -14,7 +14,7 @@
     "r2_buckets": [
         {
             "binding": "MESSAGE_ASSETS",
-            "bucket_name": "message-assets"
+            "bucket_name": "readtalk-r2"
         }
     ],
     "vars": {
