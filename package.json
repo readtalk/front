@@ -1,5 +1,5 @@
 {
-  "name": "platform",
+  "name": "frontend",
   "private": true,
   "type": "module",
   "main": "build/server/index.js",
