@@ -27,7 +27,7 @@ export function ChatInput({
       const formData = new FormData();
       formData.append('file', file);
       
-      const response = await fetch('https://group-chat.brayden-b8b.workers.dev/channel/upload', {
+      const response = await fetch('https://backend.soeparnocorp.workers.dev/channel/upload', {
         method: 'POST',
         headers: {
           'X-Channel-Id': channelId,
