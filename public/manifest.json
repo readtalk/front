@@ -1,8 +1,8 @@
 {
-  "name": "READTalk",
+  "name": "READTalk Messenger",
   "short_name": "READTalk",
   "description": "A modern chat application",
-  "start_url": "/login",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
