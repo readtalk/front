@@ -1,10 +1,10 @@
 // public/sw.js
 const CACHE_NAME = 'readtalk-v1';
 const urlsToCache = [
-  '/',
+  '/login',
   '/manifest.json',
-  '/assets/192.svg',
-  '/assets/512.svg',
+  '/assets/192.png',
+  '/assets/512.png',
 ];
 
 // Install service worker
