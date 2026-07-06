@@ -330,7 +330,7 @@ export default function Channel() {
                 >
                     {isLoadingMessages ? (
                         <div className="flex justify-center items-center h-full">
-                            <div className="w-6 h-6 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
+                            <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
                         </div>
                     ) : (
                         <div className="space-y-4">
@@ -386,7 +386,7 @@ export default function Channel() {
                 {showScrollButton && (
                     <button
                         onClick={scrollToBottom}
-                        className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 flex items-center gap-2"
+                        className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-600 flex items-center gap-2"
                     >
                         <ArrowDown weight="bold" className="w-4 h-4" />
                         Scroll to latest
