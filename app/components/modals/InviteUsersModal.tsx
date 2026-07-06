@@ -24,7 +24,7 @@ export const InviteUsersModal = ({ onClose, channel }: InviteUsersModalProps) =>
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://group-chat.brayden-b8b.workers.dev/channels/${channel.id}/invite`, {
+      const response = await fetch(`https://backend.readtalk.workers.dev/channels/${channel.id}/invite`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
