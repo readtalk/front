@@ -118,7 +118,7 @@ export default function AuthLayout() {
             <div className="flex w-full justify-between border-b border-neutral-200 bg-neutral-50 py-1 pr-2 pl-6 transition-colors dark:border-neutral-800 dark:bg-neutral-950">
                 <div className="flex flex-1 gap-2 items-center">
                     <Chats size={16} weight="fill" />
-                    <div>READ<strong>Talk</strong></div>
+                    <div><strong>READT</strong>alk</div>
                 </div>
 
                 <div className="flex flex-row-reverse flex-1 items-center gap-3">
