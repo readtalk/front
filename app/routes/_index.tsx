@@ -1,4 +1,4 @@
-// app/routes/_index.tsx (versi minimalis kayak WA)
+// app/routes/_index.tsx //
 import { Link } from "react-router";
 
 export default function Index() {
@@ -18,7 +18,7 @@ export default function Index() {
             {/* Tombol Agree and Continue */}
             <div className="w-full max-w-md mt-8">
                 <Link
-                    to="/login"
+                    to="/register"
                     className="block w-full bg-[#ff0000] hover:bg-[#cc0000] text-white font-semibold py-3 rounded-full transition text-center"
                 >
                     Agree and continue
