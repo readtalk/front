@@ -4,6 +4,7 @@ export default [
     route("", "routes/welcome.tsx"),  
     route("login", "routes/auth/login.tsx"),
     route("register", "routes/auth/register.tsx"),
+
     
     layout("components/layouts/AuthLayout.tsx", [
         route("overview", "routes/overview.tsx"),
