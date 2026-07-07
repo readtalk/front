@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Phone, LockKey, Globe, Heart, ChatText } from "@phosphor-icons/react";
+import { Phone, LockKey, Globe, Heart, ChatText, CaretDown } from "@phosphor-icons/react"; // CaretDown dibalikin
 
 export default function Welcome() {
   const [showLogo, setShowLogo] = useState(true);
 
-  // CEPETIN: 2500ms = 1500 tampil + 400 fade + 600 jeda
   useEffect(() => {
     const interval = setInterval(() => {
       setShowLogo(prev =>!prev);
-    }, 2500); 
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -21,7 +20,6 @@ export default function Welcome() {
           {/* AREA ILUSTRASI GEDE */}
           <div className="relative w-64 h-64 flex items-center justify-center">
 
-            {/* LOGO 192.PNG */}
             <img
               src="/assets/192.png"
               alt="READTalk Logo"
@@ -29,21 +27,13 @@ export default function Welcome() {
                 ${showLogo? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
             />
 
-            {/* ILUSTRASI NUMPUK BERANTAKAN - WARNA NETRAL */}
             <div className={`absolute w-full h-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]
               ${!showLogo? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
-              
-              {/* Chat Bubble Belakang */}
               <ChatText size={160} weight="fill" className="absolute top-4 left-0 text-neutral-200 dark:text-neutral-800 rotate-[-10deg]" />
-              {/* Globe */}
               <Globe size={100} weight="fill" className="absolute top-0 right-4 text-neutral-300 dark:text-neutral-700" />
-              {/* Chat Bubble Depan */}
-              <ChatText size={140} weight="fill" className="absolute bottom-6 left-8 text-neutral-200 dark:text-neutral-800 rotate-[5deg]" />
-              {/* Gembok */}
+              <ChatText size={140} weight="fill" className="absolute bottom-6 left-8 text-neutral-200 dark:text-neutral-800 rotate-" />
               <LockKey size={70} weight="fill" className="absolute bottom-2 right-6 text-neutral-400 dark:text-neutral-600" />
-              {/* Telpon */}
               <Phone size={60} weight="fill" className="absolute top-8 left-4 text-neutral-400 dark:text-neutral-600" />
-              {/* Love */}
               <Heart size={50} weight="fill" className="absolute bottom-10 left-4 text-neutral-400 dark:text-neutral-600" />
             </div>
           </div>
@@ -53,15 +43,27 @@ export default function Welcome() {
             Welcome to READTalk
           </h1>
           <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400 text-center leading-5">
-            Read our <Link to="/privacy" className="text-neutral-900 dark:text-white font-medium underline">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-neutral-900 dark:text-white font-medium underline">Terms of Service</Link>.
+            Read our <Link to="/privacy" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-[#FF0000] font-medium">Terms of Service</Link>.
           </p>
+
+          {/* DROPDOWN BAHASA - INI YG HILANG TADI */}
+          <div className="mt-4 flex items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            <Globe size={18} />
+            <select className="appearance-none bg-transparent text-center focus:outline-none">
+              <option value="en">English</option>
+              <option value="id">Bahasa Indonesia</option>
+            </select>
+            <CaretDown size={14} />
+          </div>
         </div>
 
+        {/* TOMBOL */}
         <div className="w-full px-6 pb-6">
-          <Link to="/register" className="flex w-full h-14 items-center justify-center rounded-full bg-neutral-900 dark:bg-white text-base font-semibold text-white dark:text-black shadow-md transition active:scale-[0.98]">
+          <Link to="/register" className="flex w-full h-14 items-center justify-center rounded-full bg-[#FF0000] text-base font-semibold text-white shadow-md transition active:scale-[0.98] hover:bg-[#CC0000]">
             Agree and continue
           </Link>
         </div>
+
       </div>
     </div>
   );
