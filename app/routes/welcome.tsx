@@ -37,7 +37,7 @@ export default function Welcome() {
           </div>
 
           {/* 2. JUDUL - INI DITAMBAH JARAKNYA */}
-          <h1 className="mt-6 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight"> {/* mt-6 = tambah 24px */}
+          <h1 className="mt-8 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight"> {/* mt-6 = tambah 24px */}
             Welcome to READTalk
           </h1>
 
