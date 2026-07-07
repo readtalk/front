@@ -1,7 +1,7 @@
 import { type RouteConfig, layout, route } from "@react-router/dev/routes";
 
 export default [    
-    route("", "routes/welcome.tsx"),  // Halaman utama (Welcome)
+    route("", "routes/welcome.tsx"),  
     route("login", "routes/auth/login.tsx"),
     route("register", "routes/auth/register.tsx"),
     
