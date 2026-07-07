@@ -13,11 +13,10 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white dark:bg-zinc-950 px-4 py-8"> {/* py-8 biar center beneran */}
+    <div className="flex min-h-screen items-center justify-center bg-white dark:bg-zinc-950 px-4 py-8">
       <div className="w-full max-w-[400px] bg-white dark:bg-zinc-950">
 
-        {/* WRAPPER UTAMA PAKAI GAP BIAR RAPI */}
-        <div className="flex flex-col items-center gap-4"> {/* gap-4 = jarak antar section */}
+        <div className="flex flex-col items-center gap-4"> {/* jarak default antar item */}
 
           {/* 1. AREA LOGO/ICON */}
           <div className="relative w-60 h-60 flex items-center justify-center">
@@ -37,17 +36,17 @@ export default function Welcome() {
             </div>
           </div>
 
-          {/* 2. JUDUL - JARAK DARI LOGO = gap-4 */}
-          <h1 className="text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight">
+          {/* 2. JUDUL - INI DITAMBAH JARAKNYA */}
+          <h1 className="mt-6 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight"> {/* mt-6 = tambah 24px */}
             Welcome to READTalk
           </h1>
 
-          {/* 3. TEKS - JARAK DARI JUDUL = gap-4 */}
+          {/* 3. TEKS */}
           <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center leading-5 px-2">
             Read our <Link to="/privacy" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-[#FF0000] font-medium">Terms of Service</Link>.
           </p>
 
-          {/* 4. LANGUAGE - JARAK DARI TEKS = gap-4 */}
+          {/* 4. LANGUAGE */}
           <div className="flex items-center gap-2 text-sm font-medium text-neutral-800 dark:text-neutral-200">
             <Globe size={18} />
             <select className="appearance-none bg-transparent text-center focus:outline-none">
@@ -57,8 +56,8 @@ export default function Welcome() {
             <CaretDown size={14} />
           </div>
 
-          {/* 5. TOMBOL - JARAK DARI LANGUAGE = gap-4 */}
-          <div className="w-full pt-2"> {/* pt-2 biar ada napas dikit sebelum tombol */}
+          {/* 5. TOMBOL */}
+          <div className="w-full pt-2">
             <Link to="/register" className="flex w-full h-14 items-center justify-center rounded-full bg-[#FF0000] text-base font-semibold text-white shadow-lg transition active:scale-[0.98] hover:bg-[#CC0000]">
               Agree and continue
             </Link>
