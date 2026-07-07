@@ -16,7 +16,8 @@ export default function Welcome() {
     <div className="flex min-h-screen items-center justify-center bg-white dark:bg-zinc-950 px-4 py-8">
       <div className="w-full max-w-[400px] bg-white dark:bg-zinc-950">
 
-        <div className="flex flex-col items-center gap-4"> {/* jarak default antar item */}
+        {/* GAP-6 = 24px. LEBIH LONGGAR DARI GAP-4 */}
+        <div className="flex flex-col items-center gap-6">
 
           {/* 1. AREA LOGO/ICON */}
           <div className="relative w-60 h-60 flex items-center justify-center">
@@ -36,13 +37,13 @@ export default function Welcome() {
             </div>
           </div>
 
-          {/* 2. JUDUL - INI DITAMBAH JARAKNYA */}
-          <h1 className="mt-8 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight"> {/* mt-6 = tambah 24px */}
+          {/* 2. JUDUL - TETEP MT-8 BIAR PALING JAUH */}
+          <h1 className="mt-8 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight">
             Welcome to READTalk
           </h1>
 
-          {/* 3. TEKS */}
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center leading-5 px-2">
+          {/* 3. TEKS - KASIH PX-4 BIAR GA MEPET KANAN KIRI */}
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center leading-6 px-4">
             Read our <Link to="/privacy" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-[#FF0000] font-medium">Terms of Service</Link>.
           </p>
 
@@ -56,8 +57,8 @@ export default function Welcome() {
             <CaretDown size={14} />
           </div>
 
-          {/* 5. TOMBOL */}
-          <div className="w-full pt-2">
+          {/* 5. TOMBOL - KASIH PT-4 BIAR ADA NAPAS */}
+          <div className="w-full pt-4">
             <Link to="/register" className="flex w-full h-14 items-center justify-center rounded-full bg-[#FF0000] text-base font-semibold text-white shadow-lg transition active:scale-[0.98] hover:bg-[#CC0000]">
               Agree and continue
             </Link>
