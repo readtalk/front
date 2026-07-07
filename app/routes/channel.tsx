@@ -230,7 +230,7 @@ export default function Channel() {
             }
             if (data.success && data.message) {
                 // SOUND RECEIVED MESSAGE
-                const audio = new Audio('/notification/happy-to-help-notification-sound.mp3');
+                const audio = new Audio('/notification/to-the-point-568.mp3');
                 audio.play().catch(() => {});
 
                 if (isNearBottomRef.current) {
