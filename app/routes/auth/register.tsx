@@ -85,9 +85,9 @@ export default function Register() {
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-md rounded-lg bg-white text-black p-8 shadow-md">
         <div>
-          <h2 className="text-center text-3xl font-bold tracking-tight">
-            Register
-          </h2>
+          <h3 className="text-center text-3xl font-bold tracking-tight">
+            READTalk Messenger
+          </h3>
           <p className="mt-2 text-center text-sm text-gray-600">
             © 2026 SOEPARNO ENTERPRISE Corp.
           </p>
