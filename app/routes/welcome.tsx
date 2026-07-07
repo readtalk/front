@@ -1,29 +1,46 @@
-// app/routes/welcome.tsx
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Phone, LockKey, Globe, Heart, ChatsCircle, CaretDown } from "@phosphor-icons/react";
 
 export default function Welcome() {
+  const [showLogo, setShowLogo] = useState(true);
+
+  // LOOP WA: Tampil 2s -> Fade 500ms -> Pause 800ms -> Ganti
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowLogo(prev =>!prev);
+    }, 3300); // 2000 tampil + 500 fade + 800 pause
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    // 1. WRAPPER: Center di desktop. bg sama
-    <div className="flex min-h-screen items-center justify-center bg-white dark:bg-zinc-950 px-4 py-6">
-
-      {/* 2. CARD INVISIBLE: max-w sama, bg sama, cuma ada padding */}
+    <div className="flex min-h-screen items-start justify-center bg-white dark:bg-zinc-950 px-4 pt-8 pb-8 sm:items-center">
       <div className="w-full max-w-[420px] bg-white dark:bg-zinc-950 rounded-2xl">
-
-        {/* KONTEN DALAM: px-6 pt-12 pb-6 */}
         <div className="flex flex-col items-center px-6 pt-12 pb-6">
 
-          {/* ILUSTRASI: 5 icon + logo 192.png */}
+          {/* AREA ILUSTRASI - TINGGI DIKUNCI */}
           <div className="relative w-48 h-48 flex items-center justify-center">
-            <img src="/assets/192.png" alt="READTalk Logo" className="w-24 h-24 rounded-2xl shadow-sm animate-[fadeIn_0.4s_ease-out]" />
-            <ChatsCircle size={32} weight="fill" className="absolute top-2 left-4 text-neutral-300 dark:text-neutral-700 animate-[fadeIn_0.4s_ease-out_0.1s]" />
-            <Phone size={24} weight="fill" className="absolute top-6 right-2 text-neutral-300 dark:text-neutral-700 animate-[fadeIn_0.4s_ease-out_0.2s]" />
-            <LockKey size={28} weight="fill" className="absolute bottom-8 left-2 text-neutral-300 dark:text-neutral-700 animate-[fadeIn_0.4s_ease-out_0.3s]" />
-            <Globe size={26} weight="fill" className="absolute bottom-4 right-6 text-neutral-300 dark:text-neutral-700 animate-[fadeIn_0.4s_ease-out_0.4s]" />
-            <Heart size={22} weight="fill" className="absolute top-1/2 -right-2 text-neutral-300 dark:text-neutral-700 animate-[fadeIn_0.4s_ease-out_0.5s]" />
+
+            {/* LOGO 192.PNG */}
+            <img
+              src="/assets/192.png"
+              alt="READTalk Logo"
+              className={`w-24 h-24 rounded-2xl shadow-sm absolute transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+                ${showLogo? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
+            />
+
+            {/* 5 ICON PHOSPHOR BERANTAKAN */}
+            <div className={`absolute w-full h-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+              ${!showLogo? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+              <ChatsCircle size={32} weight="fill" className="absolute top-2 left-4 text-neutral-300 dark:text-neutral-700" />
+              <Phone size={24} weight="fill" className="absolute top-6 right-2 text-neutral-300 dark:text-neutral-700" />
+              <LockKey size={28} weight="fill" className="absolute bottom-8 left-2 text-neutral-300 dark:text-neutral-700" />
+              <Globe size={26} weight="fill" className="absolute bottom-4 right-6 text-neutral-300 dark:text-neutral-700" />
+              <Heart size={22} weight="fill" className="absolute top-1/2 -right-2 text-neutral-300 dark:text-neutral-700" />
+            </div>
           </div>
 
-          {/* JUDUL + TEKS: mt-6 mt-2 */}
+          {/* TEKS */}
           <h1 className="mt-6 text-2xl font-bold text-neutral-900 dark:text-white text-center">
             Welcome to READTalk
           </h1>
@@ -31,7 +48,6 @@ export default function Welcome() {
             Read our <Link to="/privacy" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-[#FF0000] font-medium">Terms of Service</Link>.
           </p>
 
-          {/* DROPDOWN: mt-4 */}
           <div className="mt-4 flex items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-300">
             <Globe size={18} />
             <select className="appearance-none bg-transparent text-center focus:outline-none">
@@ -42,24 +58,13 @@ export default function Welcome() {
           </div>
         </div>
 
-        {/* TOMBOL: pb-6 px-6. Jadi mepet ke teks di atas, ga jauh */}
         <div className="w-full px-6 pb-6">
-          <Link
-            to="/register"
-            className="flex w-full h-14 items-center justify-center rounded-full bg-[#FF0000] text-base font-semibold text-white shadow-md transition active:scale-[0.98] hover:bg-[#CC0000]"
-          >
+          <Link to="/register" className="flex w-full h-14 items-center justify-center rounded-full bg-[#FF0000] text-base font-semibold text-white shadow-md transition active:scale-[0.98] hover:bg-[#CC0000]">
             Agree and continue
           </Link>
         </div>
 
       </div>
     </div>
-
-    <style>{`
-      @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.95); }
-        to { opacity: 1; transform: scale(1); }
-      }
-    `}</style>
   );
 }
