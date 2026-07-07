@@ -104,7 +104,7 @@ export default function AuthLayout() {
             localStorage.removeItem('userId');
             localStorage.removeItem('user');
             
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             console.error('Error signing out:', error);
         }
