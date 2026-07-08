@@ -31,7 +31,7 @@ export default function AuthLayout() {
         if (currentUser) {
             return `${currentUser.first_name[0]}${currentUser.last_name[0]}`.toUpperCase();
         }
-        return 'B';
+        return '?';
     }, [users]);
 
     useEffect(() => {
