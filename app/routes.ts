@@ -8,6 +8,6 @@ export default [
     layout("components/layouts/AuthLayout.tsx", [
         route("overview", "routes/overview.tsx"),
         route("channel/:id", "routes/channel.tsx"),
-        route("profile", "routes/profile.tsx"), // 🔥 TAMBAHKAN INI
+        route("settings", "routes/settings.tsx"),
     ]),
 ] satisfies RouteConfig;
