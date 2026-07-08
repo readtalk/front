@@ -51,7 +51,7 @@ export default function Login() {
       <div className="w-full max-w-[400px] bg-white dark:bg-zinc-950">
         <div>
           <h3 className="text-center text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
-            READTalk Messenger
+            Login
           </h3>
           <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
             © 2026 SOEPARNO ENTERPRISE Corp.
