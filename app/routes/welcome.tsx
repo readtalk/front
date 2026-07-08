@@ -29,7 +29,7 @@ export default function Welcome() {
           </div>
 
           <h1 className="mt-8 text-2xl font-bold text-neutral-900 dark:text-white text-center leading-tight">Welcome to READTalk</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center leading-6 px-4">Read our <Link to="/privacy" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="/tos" className="text-[#FF0000] font-medium">Terms of Service</Link>.</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center leading-6 px-4">Read our <Link to="https://web-readtalk.pages.dev/" className="text-[#FF0000] font-medium">Privacy Policy</Link>. Tap "Agree and continue" to accept the <Link to="https://web-readtalk.pages.dev/" className="text-[#FF0000] font-medium">Terms of Service</Link>.</p>
           <div className="flex items-center gap-2 text-sm font-medium text-neutral-800 dark:text-neutral-200"><Globe size={18} /><select className="appearance-none bg-transparent text-center focus:outline-none"><option value="en">English</option><option value="id">Bahasa Indonesia</option></select><CaretDown size={14} /></div>
           
           <div className="w-full pt-4">
