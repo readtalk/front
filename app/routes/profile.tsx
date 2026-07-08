@@ -47,7 +47,7 @@ export default function Profile() {
       const [firstName, ...lastNameParts] = fullName.trim().split(' ');
       const lastName = lastNameParts.join(' ') || '';
 
-      const response = await fetch('https://api.readtalk.workers.dev/users', {
+      const response = await fetch('https://api.readtalk.workers.dev/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
