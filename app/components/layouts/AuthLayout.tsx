@@ -160,12 +160,12 @@ export default function AuthLayout() {
                             <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-neutral-800 rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-700 z-50">
                                 <div className="py-1">                           
                                     <Link
-                                        to="/settings"
+                                        to="/profile"
                                         className="flex items-center px-4 py-2 text-sm w-full hover:bg-neutral-100 dark:hover:bg-neutral-700"
                                         onClick={() => setShowThemeDropdown(false)}
                                     >
                                         <User size={16} className="mr-2" />
-                                        Settings
+                                        Profile
                                     </Link>
                                     
                                     <div className="h-px bg-neutral-200 dark:bg-neutral-700 my-1" />
