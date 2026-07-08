@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useLoaderData, useNavigate } from 'react-router';
-import { useChatContext } from '~/providers';
 import { Avatar } from '~/components/avatar/Avatar';
 import { Button } from '~/components/button/Button';
 import { Input } from '~/components/input/Input';
