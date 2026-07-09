@@ -1,4 +1,4 @@
-// import PrimaryPageHeader from "~/blocks/PrimaryPageHeader";
+import PrimaryPageHeader from "~/blocks/PrimaryPageHeader";
 import { Button } from "~/components/button/Button";
 import { ArrowSquareUpRight } from "@phosphor-icons/react";
 
