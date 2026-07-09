@@ -19,7 +19,7 @@ export default function Login() {
     setError(null);
     setIsLoading(true);
     try {
-      const response = await fetch("https://server.readtalk.workers.dev/password/authorize", {
+      const response = await fetch("https://api.readtalk.workers.dev/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials)
