@@ -1,4 +1,5 @@
 // app/routes/settings.tsx
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Avatar } from '~/components/avatar/Avatar';
