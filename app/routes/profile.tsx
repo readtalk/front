@@ -1,5 +1,4 @@
-// app/routes/settings.tsx
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useState, useEffect } from 'react';
 
 import { Avatar } from '~/components/avatar/Avatar';
@@ -13,7 +12,7 @@ import { UploadAvatarModal } from '~/components/modals/UploadAvatarModal';
 export default function Profile() {
   const navigate = useNavigate();
   
-  // 🔥 Ambil dari localStorage
+  
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [avatar, setAvatar] = useState('');
